@@ -38,8 +38,13 @@
 
         /* 强制手机端 100% 满屏无黑边 */
         @media screen and (max-width: 768px) {
+            html, body {
+                display: block; /* 取消flex，强制铺满 */
+            }
             .swiper {
-                max-width: 100%;
+                max-width: none !important;
+                width: 100vw !important;
+                height: 100vh !important;
                 box-shadow: none;
             }
         }
